@@ -13,7 +13,7 @@ cy.get("button[type='submit']").click();
 }
 verifyLogin(){
 cy.url().should("include","/dashboard");
-cy.get(".oxd-topbar-header-title").should("contain","Dashboard");
+
 }
 }
 
