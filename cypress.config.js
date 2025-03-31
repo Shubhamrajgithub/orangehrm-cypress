@@ -4,11 +4,12 @@ module.exports = {
       // implement node event listeners here
     },
   },
-  reporter: "mochawesome",
-  reporterOptions: {
-    reportDir: "cypress/reports",
-    overwrite: false,
-    html: false,
-    json: true,
+   reporter: "mochawesome",
+    reporterOptions: {
+      reportDir: "cypress/reports",
+      overwrite: false,
+      html: true,  // ✅ Enable HTML report generation
+      json: true,
+      timestamp: "mmddyyyy_HHMMss",
   },
 };

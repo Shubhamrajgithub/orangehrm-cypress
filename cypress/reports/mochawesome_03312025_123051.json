@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-03-31T07:00:43.163Z",
+    "end": "2025-03-31T07:00:51.746Z",
+    "duration": 8583,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "610faaf8-b984-4abf-9674-be2558ee7f90",
+      "title": "",
+      "fullFile": "cypress/e2e/login.cy.js",
+      "file": "cypress/e2e/login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "936d3a55-03fe-4bbb-bb86-f83c35e254d0",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should login successfully",
+              "fullTitle": "Login should login successfully",
+              "timedOut": null,
+              "duration": 6304,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.visit();\n_LoginPage.default.enterUsername(\"Admin\");\n_LoginPage.default.enterPassword(\"admin123\");\n_LoginPage.default.clickLogin();\n_LoginPage.default.verifyLogin();",
+              "err": {},
+              "uuid": "2ca4f3f9-c628-4c63-a88e-84fd7e16c4e5",
+              "parentUUID": "936d3a55-03fe-4bbb-bb86-f83c35e254d0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2ca4f3f9-c628-4c63-a88e-84fd7e16c4e5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6304,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
