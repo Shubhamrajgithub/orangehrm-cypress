@@ -1,21 +1,31 @@
-name: Cypress Tests (POM Model)
+name: Cypress Tests with Mochawesome Report
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm install
 
-      - name: Run Cypress tests
-        run: npx cypress run
+      - name: Run Cypress Tests
+        run: npx cypress run --reporter mochawesome
+
+      - name: Upload Mochawesome Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: mochawesome-report
+          path: cypress/reports/
